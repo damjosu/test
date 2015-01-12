@@ -77,5 +77,26 @@ public class Test
         System.out.println("La suma de los números comprendidos entre [" + limInf + "," + limSup + "] es: " + sum);
     }
     
-    
+    /**
+     * Iff the given number is prime returns true, false otherwise.
+     */
+    public boolean isPrime(int n)
+    {
+        boolean prime = true;
+        multi = 2;        
+        while (multi < n) 
+        {
+            if ((n % multi) == 0)
+            {
+                prime = false;
+            }
+            multi++;
+        }
+        
+        if (n < 2)
+        {
+            prime = false;
+        }
+        return prime;
+    }
 }
