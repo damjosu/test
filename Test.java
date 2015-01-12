@@ -54,4 +54,28 @@ public class Test
         System.out.println("La suma de los números comprendidos entre [" + limInf + "," + limSup + "] es: " + sum);
     }
     
+    /**
+     * Sums all the numbers between [a,b].
+     */
+    public void sumValuesInterval(int a, int b)
+    {
+        if (a < b)
+        {
+            limInf = a;
+            limSup = b;
+        }
+        else
+        {
+            limInf = b;
+            limSup = a;
+        }
+        int sum = limSup;
+        for (int cont = limInf; cont < limSup; cont ++)
+        {
+            sum += cont;
+        }
+        System.out.println("La suma de los números comprendidos entre [" + limInf + "," + limSup + "] es: " + sum);
+    }
+    
+    
 }
