@@ -26,16 +26,32 @@ public class Test
         multi = 5;
         limInf = 10;
         limSup = 95;        
-         while ((limInf % 5) != 0)
+        while ((limInf % multi) != 0)//It will add 1 until the number is Multi's multiple
         {
             limInf++;
         }
         System.out.println("Los multiplos de " + multi + " entre (" + limInf + "," + limSup + ") son: ");        
-        for (int cont = limInf; cont < limSup; cont += 5)
+        for (int cont = (limInf + multi); cont < limSup; cont += multi)
         {
             System.out.println(cont);
         }
     }
     
+    /**
+     * Sums all the numbers between [0,10]
+     */
+    public void sumValues()
+    {
+        limInf = 0;
+        limSup = 10;
+        int cont = 0;
+        int sum = 0;
+        while (cont < limSup)
+        {
+            cont++;
+            sum += cont;
+        }
+        System.out.println("La suma de los números comprendidos entre [" + limInf + "," + limSup + "] es: " + sum);
+    }
     
 }
